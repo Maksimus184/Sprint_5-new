@@ -7,8 +7,8 @@ from data import Credentials
 
 
 class TestRegistration:
-    def test_successful_registration(self, start_from_main_page):
-        driver = start_from_main_page
+    def test_successful_registration(self, driver):
+        driver = driver
         driver.get(URL)
 
         wait = WebDriverWait(driver, 60)
@@ -31,8 +31,8 @@ class TestRegistration:
         WebDriverWait(driver, 10).until(EC.url_to_be(LOGIN_URL))
         assert driver.current_url == LOGIN_URL
 
-    def test_failed_registration(self, start_from_main_page):
-        driver = start_from_main_page
+    def test_failed_registration(self, driver):
+        driver = driver
         driver.get(URL)
 
         # Явное ожидание (инициализация wait) перед взаимодействием с элементами

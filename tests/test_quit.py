@@ -7,8 +7,8 @@ from data import Credentials
 
 class TestUserAccount:
 
-    def test_transfer_to_your_personal_account(self, start_from_main_page):
-        driver = start_from_main_page
+    def test_transfer_to_your_personal_account(self, driver):
+        driver = driver
         driver.get(URL)
 
         # Явное ожидание (инициализация wait) перед взаимодействием с элементами

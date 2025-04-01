@@ -6,8 +6,8 @@ from data import Credentials
 
 class TestTransfer:
 
-    def test_transfer_to_your_personal_account(self, start_from_main_page):
-        driver = start_from_main_page
+    def test_transfer_to_your_personal_account(self, driver):
+        driver = driver
         driver.get(URL)
 
         # Явное ожидание (инициализация wait) перед взаимодействием с элементами
@@ -33,8 +33,8 @@ class TestTransfer:
         wait.until(EC.url_to_be(URL))
         assert driver.current_url == URL
 
-    def test_transfer_from_personal_account_to_logo(self, start_from_main_page):
-        driver = start_from_main_page
+    def test_transfer_from_personal_account_to_logo(self, driver):
+        driver = driver
         driver.get(URL)
 
         # Явное ожидание (инициализация wait) перед взаимодействием с элементами
@@ -65,8 +65,8 @@ class TestTransfer:
         wait.until(EC.url_to_be(URL))
         assert driver.current_url == URL
 
-    def test_transfer_to_your_personal_account(self, start_from_main_page):
-        driver = start_from_main_page
+    def test_transfer_to_your_personal_account(self, driver):
+        driver = driver
         driver.get(URL)
 
         # Явное ожидание (инициализация wait) перед взаимодействием с элементами

@@ -6,8 +6,8 @@ from data import Credentials
 
 class TestEntrance:
 
-    def test_successful_entrance_from_main_page(self, start_from_main_page):
-        driver = start_from_main_page
+    def test_successful_entrance_from_main_page(self, driver):
+        driver = driver
         driver.get(URL)
 
         wait = WebDriverWait(driver, 30)
@@ -28,8 +28,8 @@ class TestEntrance:
         wait.until(EC.url_to_be(URL))
         assert driver.current_url == URL
 
-    def test_entrance_from_password_recovery_page(self, start_from_main_page):
-        driver = start_from_main_page
+    def test_entrance_from_password_recovery_page(self, driver):
+        driver = driver
         driver.get(URL)
 
         # Явное ожидание (инициализация wait) перед взаимодействием с элементами
@@ -50,8 +50,8 @@ class TestEntrance:
         wait.until(EC.url_to_be(RESET_PASSWORD_URL))
         assert driver.current_url == RESET_PASSWORD_URL
 
-    def test_successful_entrance_from_personal_account(self, start_from_main_page):
-        driver = start_from_main_page
+    def test_successful_entrance_from_personal_account(self, driver):
+        driver = driver
         driver.get(URL)
 
         # Явное ожидание (инициализация wait) перед взаимодействием с элементами
@@ -73,8 +73,8 @@ class TestEntrance:
         wait.until(EC.url_to_be(URL))
         assert driver.current_url == URL
 
-    def test_successful_entrance_from_personal_account(self, start_from_main_page):
-        driver = start_from_main_page
+    def test_successful_entrance_from_personal_account(self, driver):
+        driver = driver
         driver.get(URL)
 
         # Явное ожидание (инициализация wait) перед взаимодействием с элементами
